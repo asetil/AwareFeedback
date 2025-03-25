@@ -30,7 +30,7 @@ Define the `awareFeed` configuration in your JavaScript section:
             }
         }
     };    
-</script>
+</script>asdasd
 ```
 
 This configuration allows you to specify:
