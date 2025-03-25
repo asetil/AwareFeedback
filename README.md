@@ -35,6 +35,9 @@ This configuration allows you to specify:
 
 Once these steps are completed, the page rating component will be active and ready to collect user feedback.
 
+![image](https://github.com/user-attachments/assets/4d03a56e-0dfd-40dd-8b5a-f5897f7ecbdd)
+
+
 ---
 
 For more details, visit the repository: [AwareFeedback](https://github.com/asetil/AwareFeedback).
