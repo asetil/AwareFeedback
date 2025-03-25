@@ -21,8 +21,14 @@ Define the `awareFeed` configuration in your JavaScript section:
     window.awareFeed = {
         application: "NAMSO",  // Unique application identifier
         userId: "@(Guid.NewGuid().ToString())",  // Unique user identifier
-        template: "namso1",  // Template style identifier
-        apiUrl: "https://localhost:7141"  // API endpoint for feedback submission
+        apiUrl: "https://localhost:7141",  // API endpoint for feedback submission
+        cssUrl: "/css/aware-feed.css", //customize styling
+        lang:"en", //set preferred language
+        localization: { //Configure for custom localization
+            fr: {
+                careOpinions: "Nous valorisons vos avis"
+            }
+        }
     };    
 </script>
 ```
@@ -30,8 +36,10 @@ Define the `awareFeed` configuration in your JavaScript section:
 This configuration allows you to specify:
 - **application**: A unique identifier for your application.
 - **userId**: The current user's unique identifier (if available).
-- **template**: The template style used for the feedback component.
 - **apiUrl**: The API endpoint where feedback data is submitted.
+- **cssUrl**: Custom css endpoint address, creates a link element in your page.
+- **lang**: Set your page language.
+- **localization**: In default, EN ve TR localizations enabled if you customize for your own language use this option.
 
 Once these steps are completed, the page rating component will be active and ready to collect user feedback.
 
