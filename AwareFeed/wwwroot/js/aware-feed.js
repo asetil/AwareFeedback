@@ -200,7 +200,7 @@
                 });
         },
         getLocalization: function () {
-            return {
+            const result = {
                 tr: {
                     ratePage: "Sayfayı Değerlendirin",
                     careOpinions: "Görüşlerinizi Önemsiyoruz",
@@ -228,6 +228,12 @@
                     messageSendError: "An error occurred while sending your feedback. Please try again later!"
                 }
             }
+
+            if (window.awareFeed.localization) {
+                return Object.assign(window.awareFeed.localization, result);
+            }
+
+            return result;
         }
     };
 
