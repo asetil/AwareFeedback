@@ -1,0 +1,44 @@
+﻿@model List<FeedbackItemDto>;
+
+<div class="feedback-list">
+    <h3>Geri Bildirimler</h3>
+    <table id="myTable" class="table table-striped display">
+        <thead>
+            <tr>
+                <th>Uygulama</th>
+                <th>Sayfa</th>
+                <th>Tipi</th>
+                <th>İçerik</th>
+                <th>Zorluklar</th>
+                <th>Oylama</th>
+                <th>Kullanıcı</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.ApplicationId</td>
+                    <td>@item.Path</td>
+                    <td>@item.Type</td>
+                    <td>@item.Content</td>
+                    <td>@item.Difficulties</td>
+                    <td>@item.Rating</td>
+                    <td>@item.UserId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+        <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#myTable').DataTable();
+            });
+        </script>
+}
+

@@ -1,0 +1,35 @@
+.aware-feedback .feedback-button { position: fixed; display: block; bottom: 20px; right: 20px; background: url(../img/btn_feedback.png) #fff; color: #fff; border: none; padding: 0; cursor: pointer; font-size: 14px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); transition: background 0.3s; background-size: cover; border-radius: 50%; width: 85px; height: 77px; border: 2px solid #69c3f8; }
+.aware-feedback .feedback-button.hide{display:none;}
+
+/*.aware-feedback .feedback-button:hover { background: #127168; }*/
+.aware-feedback .feedback-popup { display: none; position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%); padding: 30px 40px; box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; border-radius: 6px; z-index: 10000; width: 720px; background: #fff; border: 15px solid #d5fffa; }
+.aware-feedback .feedback-popup.active { display:block; }
+
+.aware-feedback .feedback-title { margin-bottom: 20px; color: #22b5a7; font-size: 27px; font-weight: bold; text-align: center; }
+.aware-feedback .feedback-textarea { width: 100%; height: 80px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; padding: 8px; font-size: 14px; resize: none; }
+
+.aware-feedback .feedback-button-container { display: flex; justify-content: space-between; gap: 40px; }
+.aware-feedback .feedback-submit-button { background: #22b5a7; color: #fff; border: none; padding: 10px 15px; cursor: pointer; font-weight: 600; border-radius: 5px; flex: 1; margin-right: 5px; transition: background 0.3s; }
+.aware-feedback .feedback-submit-button:hover { background: #25c9ba; }
+
+.aware-feedback .feedback-cancel-button {background: #fff; color: #232323; font-weight: 600; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px; flex: 1; transition: background 0.3s; }
+.aware-feedback .feedback-cancel-button:hover { color: #22b5a7; }
+
+.aware-feedback .lbl-feed { margin-bottom: 10px; font-weight: 600; }
+.aware-feedback .lbl-feed.mb-0 { margin-bottom: 0 !important; }
+
+.aware-feedback .star-rating { text-align: center; margin: 0; margin-bottom: 30px; display: flex; gap: 5px; flex-direction:row-reverse;justify-content:center;}
+.aware-feedback .star-rating .star { font-size: 60px; cursor: pointer; margin: 0 11px; line-height: 50px; color: #dedede; transition: color 0.2s ease-in-out; }
+.aware-feedback .star-rating .star.rated, .aware-feedback .star-rating .star:hover, .aware-feedback .star-rating .star:hover ~ .star { color: #f7b959; }
+
+.aware-feedback .feedback-message { color: #ff1313; display: block; margin: 10px 0; text-align: center; }
+.aware-feedback .feedback-message.hide { display:none; }
+
+.aware-feedback .feedback-loading { position: absolute; top: 0; left: 0; width: 0; height: 0; display:none; background-color: rgba(0, 0, 0, 0.25);z-index: 0; }
+.aware-feedback .feedback-loading.active { z-index: 10001; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+.aware-feedback .feedback-loading .feedback-loading-spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: feedback-spin 2s linear infinite; }
+
+@keyframes feedback-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
