@@ -47,8 +47,22 @@
             const loadingDiv = document.createElement('div');
             loadingDiv.classList.add("feedback-loading");
 
+            //const spinner = document.createElement('div');
+            //spinner.classList.add("feedback-loading-spinner");
+            //loadingDiv.appendChild(spinner);
+            //popup.appendChild(loadingDiv);
+
             const spinner = document.createElement('div');
-            spinner.classList.add("feedback-loading-spinner");
+            spinner.classList.add("spinner-container");
+
+            const spinner1 = document.createElement('div');
+            spinner1.classList.add("spinner-1");
+            spinner.appendChild(spinner1);
+
+            const spinner2 = document.createElement('div');
+            spinner2.classList.add("spinner-2");
+            spinner.appendChild(spinner2);
+
             loadingDiv.appendChild(spinner);
             popup.appendChild(loadingDiv);
 
